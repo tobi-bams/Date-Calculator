@@ -114,14 +114,14 @@ function getdateValue(){
                   date_year_from_check++;
              }
          }  
-         
+         var day_difference = date_day_num_to - date_day_num_from;
+  
+        var total_num_days = Math.abs(month_days_total + day_difference);
      };
 
   };
 
-  var day_difference = date_day_num_to - date_day_num_from;
   
-  var total_num_days = month_days_total + day_difference;
   var total_years = Math.floor(total_num_days/365);
 
   var weeks = total_num_days - (total_years * 365);
@@ -198,7 +198,7 @@ function getdateValue(){
 
  document.getElementById('total_seconds').innerHTML = total_seconds + " Seconds";
 
- if(date_year_to < date_year_from){
+ if((date_year_num_to < date_year_num_from) || ((date_month_num_to < date_month_num_from) && (date_year_num_to == date_year_num_from)) || ((date_month_num_to == date_month_num_from) && (date_year_num_to == date_year_num_from) && (date_day_num_to < date_day_num_from))){
 
     alert("Please Enter the Correct form of Date....!!!! The Date to should not be Less than That of the Date From (Try It again)...... Thanks!!!");
     document.getElementById('getter').innerHTML = "Please Try Again";
