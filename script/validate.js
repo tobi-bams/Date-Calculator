@@ -30,24 +30,24 @@ function getdateValue(){
 
   if(date_year_num_from <= date_year_num_to){
 
-     let index_month_start = date_month_num_from - 1; //Month From Value in array that will be changing
-     let index_month_stop = date_month_num_from - 1; //Month From Value in the array that will remain constant
+     var index_month_start = date_month_num_from - 1; //Month From Value in array that will be changing
+     var index_month_stop = date_month_num_from - 1; //Month From Value in the array that will remain constant
 
-     let index_month_from = date_month_num_from - 1;
+     var index_month_from = date_month_num_from - 1;
 
-     let index_month_to_end = date_month_num_to - 1;
+     var index_month_to_end = date_month_num_to - 1;
 
-     let index_month_to = date_month_num_to - 1;
+     var index_month_to = date_month_num_to - 1;
 
-     let month_days = month_array[index_month_start]; //This is the total number of Days
+     var month_days = month_array[index_month_start]; //This is the total number of Days
 
-     let month_days_total = 0;
+     var month_days_total = 0;
 
-     let date_year_from_check = date_year_num_from;
+     var date_year_from_check = date_year_num_from;
 
-     let index_month_less_start = date_month_num_from - 1;
+     var index_month_less_start = date_month_num_from - 1;
 
-     let index_month_less_stop = date_month_num_from - 1;
+     var index_month_less_stop = date_month_num_from - 1;
      
      while(date_year_from_check <= date_year_num_to){
 
@@ -79,8 +79,8 @@ function getdateValue(){
                  date_year_from_check++;
              }
 
-             let date_day_difference_from = month_array[index_month_from] - date_day_num_from;
-             let total_num_days = month_days_total +  date_day_num_to + date_day_difference_from;
+             var date_day_difference_from = month_array[index_month_from] - date_day_num_from;
+             var total_num_days = month_days_total +  date_day_num_to + date_day_difference_from;
 
          }
 
@@ -116,49 +116,49 @@ function getdateValue(){
                   date_year_from_check++;
              }
          }  
-         let day_difference = date_day_num_to - date_day_num_from;
+         var day_difference = date_day_num_to - date_day_num_from;
   
-        let total_num_days = Math.abs(month_days_total + day_difference);
+        var total_num_days = Math.abs(month_days_total + day_difference);
      };
 
   };
 
   
-  let total_years = Math.floor(total_num_days/365);
+  var total_years = Math.floor(total_num_days/365);
 
-  let weeks = total_num_days - (total_years * 365);
+  var weeks = total_num_days - (total_years * 365);
 
-  let total_weeks = Math.floor(weeks/7);
+  var total_weeks = Math.floor(weeks/7);
 
-  let days = weeks - (total_weeks * 7);
+  var days = weeks - (total_weeks * 7);
 
-  let final_days = Math.floor(days);
+  var final_days = Math.floor(days);
 
-  let total_hours = total_num_days * 24;
+  var total_hours = total_num_days * 24;
 
-  let total_minutes = total_hours * 60;
+  var total_minutes = total_hours * 60;
 
-  let total_seconds = total_minutes * 60;
+  var total_seconds = total_minutes * 60;
 
   if(total_years == 1){
-      let total_years_final = total_years + " Year";
+      var total_years_final = total_years + " Year";
   }
   else{
-      let total_years_final = total_years + " Years";
+      var total_years_final = total_years + " Years";
   }
 
   if(total_weeks == 1){
-    let total_weeks_final = total_weeks + " Week";
+    var total_weeks_final = total_weeks + " Week";
     }
     else{
-    let total_weeks_final = total_weeks + " Weeks";
+    var total_weeks_final = total_weeks + " Weeks";
     }
 
     if(final_days== 1){
-        let total_days_final = final_days + " Day";
+        var total_days_final = final_days + " Day";
         }
     else{
-        let total_days_final = final_days + " Days";
+        var total_days_final = final_days + " Days";
         }
 
   if(total_years != 0 && total_weeks != 0 && final_days != 0){
